@@ -75,8 +75,12 @@ public class Player : MonoBehaviour
         if(collision.gameObject.layer == 6)
         {
             isJumping = false;
-            anim.SetBool("jump", false);
-            
+            anim.SetBool("jump", false);  
+        }
+        if(collision.gameObject.tag == "Spike")
+        {
+            GameController.instance.ShowGameOver();
+            Destroy(gameObject);
         }
     }
     
