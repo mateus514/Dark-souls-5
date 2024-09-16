@@ -35,7 +35,7 @@ public class EfeitoDigitador : MonoBehaviour
         {
             if (imprimindo) return;
             imprimindo = true;
-            StartCoroutine(mensagem);
+            StartCoroutine(LetraPorLetra(mensagem));
         }
     }
     IEnumerator LetraPorLetra(string mensagem)
